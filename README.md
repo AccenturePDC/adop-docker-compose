@@ -57,12 +57,19 @@
     # Deploy
     docker-compose ${COMPOSE_OVERRIDES} ${VOLUME_OVERRIDES} up -d
     ```
-- Load the Gitlab Platform in Jenkins and create initial Workspace and Project.
+- (Optional) Load the Gitlab Platform in Jenkins and create initial Workspace and Project from the commandline.
 
     ```bash
+    # Load the Gitlab platform job to generate the Workspace creator job
     ./gitlab-load-platform
+    
+    # Set variables using for adop cli
     ./adop target set -t http://${TARGET_HOST} -u ${ADOP_CLI_USER} -p ${ADOP_CLI_PASSWORD}
+    # You will be prompted to source the target file
     source ./.adop/target
-    ./adop workspace -w ${ADOP_WORKSPACE} create -a ${INITIAL_ADMIN_USER}@${LDAP_DOMAIN}
-    ./adop project -w ${ADOP_WORKSPACE} -p ${ADOP_WORKSPACE}_Project create -a ${INITIAL_ADMIN_USER}@${LDAP_DOMAIN}
+    
+    # Create a sample workspace using adop cli.
+    ./adop workspace -w MyWorkspace create -a ${INITIAL_ADMIN_USER}@${LDAP_DOMAIN}
+    # Create a sample project using adop cli.
+    ./adop project -w MyWorkspace -p MyProject create -a ${INITIAL_ADMIN_USER}@${LDAP_DOMAIN}
     ```
