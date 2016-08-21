@@ -1,5 +1,5 @@
 jenkins:
-  image: accenturepdc/adop-jenkins:0.1.0
+  image: accenturepdc/adop-jenkins:2-rc
   environment:
     ADOP_GERRIT_ENABLED: "false"
     ADOP_GITLAB_ENABLED: "true"
@@ -22,7 +22,7 @@ jenkins-slave:
 gitlab:
   container_name: gitlab
   restart: always
-  image: gitlab/gitlab-ce:8.10.2-ce.0
+  image: gitlab/gitlab-ce:8.10.6-ce.0
   net: ${CUSTOM_NETWORK_NAME}
   expose:
     - "80"
