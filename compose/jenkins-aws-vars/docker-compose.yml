@@ -2,6 +2,7 @@ jenkins:
   environment:
     AWS_REGION: "${AWS_DEFAULT_REGION}"
     AWS_VPC_ID: "${AWS_VPC_ID}"
+    AWS_VPC_CIDR: "${AWS_VPC_CIDR}"
     AWS_KEYPAIR: "${AWS_KEY_PAIR}"
     AWS_SUBNET_ID: "${AWS_PUBLIC_SUBNET_ID}"
     DEFAULT_PUBLIC_SUBNET_ID: "${AWS_PUBLIC_SUBNET_ID}"
@@ -14,5 +15,6 @@ jenkins-slave:
   environment:
     AWS_REGION: "${AWS_DEFAULT_REGION}"
     AWS_VPC_ID: "${AWS_VPC_ID}"
+    AWS_VPC_CIDR: "${AWS_VPC_CIDR}"
     AWS_KEYPAIR: "${AWS_KEY_PAIR}"
     AWS_SUBNET_ID: "${AWS_PUBLIC_SUBNET_ID}"
