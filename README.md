@@ -17,13 +17,14 @@
     
     ```bash
     cat > my-vars.sh <<-EOF
+    export PUBLIC_IP=52.52.15.15
     export CUSTOM_NETWORK_NAME=docker-network
     export TARGET_HOST=10.10.1.5
     export LOGSTASH_HOST=10.10.1.5
     export INITIAL_ADMIN_USER=juansmith
-    export INITIAL_ADMIN_PASSWORD_PLAIN='n0ty0urUserPls!'
-    export ADOP_CLI_USER=$INITIAL_ADMIN_USER
-    export ADOP_CLI_PASSWORD=$INITIAL_ADMIN_PASSWORD_PLAIN
+    export INITIAL_ADMIN_PASSWORD_PLAIN=beshy123
+    export ADOP_CLI_USER=juansmith
+    export ADOP_CLI_PASSWORD=beshy123
     export SMTP_DOMAIN=awsamazon.com
     EOF
     ```
