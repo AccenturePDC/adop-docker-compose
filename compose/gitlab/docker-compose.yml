@@ -1,5 +1,5 @@
 jenkins:
-  image: accenturepdc/adop-jenkins:2
+  image: accenturepdc/adop-jenkins:2-0.1.1
   environment:
     ADOP_GERRIT_ENABLED: "false"
     ADOP_GITLAB_ENABLED: "true"
